@@ -12,22 +12,14 @@
 import {createHook} from 'fpe-implementation';
 import React, {useEffect, useState} from 'react';
 
-export interface CustomWrapperInterface {
-  customKey1?: string;
-  customKey2?: string;
-}
 
-const CustomWrapperContext = React.createContext<CustomWrapperInterface>({
+const CustomWrapperContext = React.createContext({
   customKey1: 'hi',
   customKey2: 'hello',
 });
 
-interface CustomWrapperProviderProps {
-  children: React.ReactNode;
-}
-
-const CustomWrapperProvider = (props: CustomWrapperProviderProps) => {
-  const [customState, setCustomState] = useState<CustomWrapperInterface>({});
+const CustomWrapperProvider = (props) => {
+  const [customState, setCustomState] = useState({});
   useEffect(() => {
     setCustomState({
       customKey1: 'hi from State',

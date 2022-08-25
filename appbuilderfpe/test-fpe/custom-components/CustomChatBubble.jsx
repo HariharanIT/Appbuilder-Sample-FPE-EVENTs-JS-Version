@@ -17,7 +17,6 @@ import {
   View,
 } from 'react-native';
 import {
-  ChatBubbleProps,
   ChatBubble,
   useEditMessage,
   useDeleteMessage,
@@ -25,7 +24,7 @@ import {
   useChatUIControl,
   useLocalUid,
 } from 'fpe-api';
-const CustomCmp = (props: ChatBubbleProps) => {
+const CustomCmp = (props) => {
   const [editActive, setEditActive] = useState(false);
   const editmsg = useEditMessage();
   const delmsg = useDeleteMessage();

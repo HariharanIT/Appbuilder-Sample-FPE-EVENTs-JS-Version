@@ -7,10 +7,7 @@ import {
   UiKitMaxVideoView,
 } from 'fpe-api';
 
-interface MaxVideoRendererInterface {
-  user: RenderInterface;
-}
-const CustomMaxVideoView: React.FC<MaxVideoRendererInterface> = ({user}) => {
+const CustomMaxVideoView= ({user}) => {
   return (
     <View style={maxStyle.container}>
       <NetworkQualityPill

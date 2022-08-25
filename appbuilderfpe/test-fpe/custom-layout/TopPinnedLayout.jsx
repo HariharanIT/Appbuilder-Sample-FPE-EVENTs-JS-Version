@@ -7,10 +7,10 @@ import {
   Text,
   Pressable,
 } from 'react-native';
-import {layoutComponent, RenderComponent, useRtcContext} from 'fpe-api';
+import { RenderComponent, useRtcContext} from 'fpe-api';
 const topPinned = true;
 
-const TopPinnedVideo: layoutComponent = ({renderData}) => {
+const TopPinnedVideo = ({renderData}) => {
   const [collapse, setCollapse] = useState(false);
   // Custom Hook *********************
   const [dim, setDim] = useState([
